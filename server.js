@@ -1,7 +1,7 @@
 const e = require("cors");
 const http = require("http");
 
-const server = http.createServer().listen(3000);
+const server = http.createServer().listen(process.env.PORT || 3000);
 
 const io = require("socket.io")(server,
     {
